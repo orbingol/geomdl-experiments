@@ -1,0 +1,13 @@
+.idea/*
+build/
+dist/
+docs/_build
+docs/_static
+docs/_templates
+*.pyc
+*.out
+*.txt
+*.csv
+*.obj
+*.stl
+*.dat
