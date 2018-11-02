@@ -1,7 +1,5 @@
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+# geomdl-experiments
+from setuptools import setup
 import os
 import re
 
@@ -16,17 +14,16 @@ def get_property(prop, project):
     return result.group(1)
 
 
-main_module = 'geofun'
-setup(
-    name='geofun',
-    version=get_property('__version__', main_module),
-    description='Experiments with NURBS-Python',
+data = dict(
+    name='geomdl_exp',
+    version=get_property('__version__', 'geomdl_exp'),
+    description='Experiments with NURBS-Python (geomdl)',
     author='Onur Rauf Bingol',
-    author_email='contact@onurbingol.net',
+    author_email='nurbs-python@googlegroups.com',
     license='MIT',
-    url='https://github.com/orbingol/letters',
-    packages=['letters'],
-    install_requires=['NURBS-Python'],
+    url='https://github.com/orbingol/geomdl-experiments',
+    packages=['geomdl_exp'],
+    install_requires=['geomdl>=4.3.4'],
     long_description=read('README.rst'),
     keywords='NURBS B-Spline curve surface CAD modeling visualization',
     classifiers=[
@@ -34,8 +31,23 @@ setup(
         'Intended Audience :: Education',
         'Intended Audience :: End Users/Desktop',
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: MIT License',
         'Topic :: Scientific/Engineering :: Mathematics',
-        'Topic :: Scientific/Engineering :: Visualization'
-    ]
+        'Topic :: Scientific/Engineering :: Visualization',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7'
+    ],
+    project_urls={
+        'Documentation': 'http://nurbs-python.readthedocs.io/',
+        'Source': 'https://github.com/orbingol/geomdl-experiments',
+        'Tracker': 'https://github.com/orbingol/geomdl-experiments/issues',
+    },
 )
+
+if __name__ == '__main__':
+    setup(**data)

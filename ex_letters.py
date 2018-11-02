@@ -1,11 +1,12 @@
-from geofun import letters
+from geomdl_exp import letters
+from geomdl import operations
 from geomdl.visualization import VisMPL
 
 
 # Generate letters
 i = letters.letter_i()
 o = letters.letter_o()
-o.translate([15, 10])
+operations.translate(o, [15, 10], inplace=True)
 
 # Add letters to a single container
 cont = i + o
