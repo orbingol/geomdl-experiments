@@ -1,12 +1,17 @@
-Experiments with NURBS-Python
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Experiments with NURBS-Python (geomdl)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This repository contains some experimental python modules which uses NURBS-Python_ package as their basis.
 
 Installing NURBS-Python
 =======================
 
-``pip install NURBS-Python``
+``pip install geomdl``
+
+Installing Experiments
+======================
+
+Since this module is still under development, using ``python setup.py develop`` for installation is recommended.
 
 Author
 ======
